@@ -1,4 +1,5 @@
 #pragma once
+
 #include <stdio.h>
 #include <stdlib.h>
 #define GLEW_STATIC
@@ -13,20 +14,15 @@
 
 using namespace std;
 
-class Shader
-{
-public: 
-	GLuint getID(); // Obtine el ID del shader.
-	Shader(const char * rutavertex, const char * rutaFragment);
+class Shader {
+public:
+	GLuint getID(); //Obtiene el ID del shader
+	Shader(const char * rutaVertex,
+		const char * rutaFragment);
 	void enlazar();
 	void desenlazar();
 private:
 	GLuint shaderID;
-	void VerificarCompilacion(GLuint id);
-	void VerificarVinculacion(GLuint id);
+	void verificarCompilacion(GLuint id);
+	void verificarVinculacion(GLuint id);
 };
-
-void main()
-{
-
-}
